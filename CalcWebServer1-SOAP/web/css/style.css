@@ -1,0 +1,23 @@
+
+
+#Panel {
+	    margin-top: 3% !important;
+    width: 500px;
+    margin: 0 auto;
+}
+
+#Resultado {
+    background-color: aliceblue;
+}
+
+#OpAvanzada {
+    margin-top: 18px;
+}
+#txt {
+    text-align: center;
+}
+
+body {
+
+        background-color: whitesmoke !important;
+}

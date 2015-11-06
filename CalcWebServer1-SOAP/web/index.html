@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html ng-app="Calculadora">
+<head>
+	<title>Reto1- Calculadora</title>
+	<meta charset="UTF-8">
+	<!-- Angular -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+	<script src="js/servicio.js"></script>
+	<script src="js/controlador.js"></script>
+	<!-- Local Storage -->
+	<script src="js/angular-local-storage.min.js"></script>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<!-- Latest compiled JavaScript -->
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+
+
+<body ng-controller="CalculadoraCtrl">
+
+  <div id="Panel"class="panel panel-primary">
+  <div class="panel-heading">
+        <h3 class="panel-title">Calculadora</h3>
+      </div>
+  <div class="panel-body">
+<!--   Operandoes  -->
+<div class="form-group">
+  <label for="PrimerOperando">Primer Operando:</label>
+  <input type="number" class="form-control"  ng-model="PrimerOperando" required=[0-9]>
+</div>
+<div class="form-group">
+  <label for="SegundoOperando">Segundo Operando:</label>
+  <input type="number" class="form-control"  ng-model="SegundoOperando" required=[0-9]>
+</div>
+
+<!--   Operaciones  -->
+
+  <div id="Resultado">
+        <h4>Operación realizada: {{mensaje}}</h4>
+        <h4>Resultado: {{resultado}}</h4>
+
+	</div>
+<br>
+<h4 id="txt">Opciones Básicas</h4>
+<div id="OpBasicas" class="btn-group btn-group-justified">
+  <div class="btn-group">
+    <button type="button" class="btn btn-primary" ng-click="hacerSuma()">Sumar</button>
+  </div><div class="btn-group">
+    <button type="button" class="btn btn-primary" ng-click="hacerResta()">Restar</button>
+  </div><div class="btn-group">
+    <button type="button" class="btn btn-primary" ng-click="hacerMultiplicacion()">Multiplicacion</button>
+    </div><div class="btn-group">
+    <button type="button" class="btn btn-primary" ng-click="hacerDivision()">Division</button>
+  </div>
+</div>
+
+
+
+<!--   Operaciones Especiales -->
+<br>
+<h4 id="txt">Opciones Avanzadas</h4>
+<div id="OpAvanzada"  class="btn-group btn-group-justified">
+  <div class="btn-group">
+    <button type="button" class="btn btn-primary" ng-click="hacerMPlus()">M+</button>
+     <button type="button" class="btn btn-primary" ng-click="hacerMMinor()">M-</button>
+    <button type="button" class="btn btn-primary" ng-click="hacerMSave()">MS (Grabar)</button>
+    <button type="button" class="btn btn-primary" ng-click="hacerMRead()">MR  (Leer)</button>
+    <button type="button" class="btn btn-primary" ng-click="hacerMClean()">MC  (Limpiar)</button>
+
+  </div>
+</div>
+</div>
+
+  </div>
+</div>
+
+<footer>
+  <p>Laura María Álvarez M</p>
+</footer>
+
+
+
+</body>
+</html>
